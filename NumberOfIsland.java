@@ -1,4 +1,4 @@
-class Solution {
+class NumberOfIsland {
     public int numIslands(char[][] grid) {
         
 int count = 0;
@@ -10,7 +10,7 @@ int count = 0;
             for (int j=0; j<grid[i].length; j++) {
                 //checking the value of each column of the row
                 if(grid[i][j] == '1'){
-                // if it is 1 then checking the surroundings
+                // if it is 1 then check the surroundings
                 callDFS(grid, i, j);
                 //increasing number of island
                 count++;
@@ -21,7 +21,8 @@ int count = 0;
     }
 
     public void callDFS(char[][] grid, int i, int j){
-        // Iteration around the cordinate and checking the value. If It gets 0. Then this is the only islan
+        // Iteration around the cordinate and 
+        // checking the values. If It gets 0. Then this will return
         if(i<0 || i>=grid.length || j<0 || j>=grid[i].length || grid[i][j] == '0'){
             System.out.println("Iterating"+i+" " + j);
             return;

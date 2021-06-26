@@ -27,6 +27,10 @@ Input: grid = [
 ]
 Output: 3
 
+![Question](question.png?raw=true "Question")
+
 //Solution Logic:
-If you find out '1' then it is an island so try to find more '1' around it and make '0'
-so that other values don't bother next time.
+1. Using DFS while look for '1' in 1st row.
+2. If '1' is found increase island number and make it '0' 
+3. Then look around [up,down,left,right] to find more '1' and make it '0' everytime.
+4. Then go for 2nd row and repeat
